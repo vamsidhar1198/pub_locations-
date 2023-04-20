@@ -4,9 +4,11 @@ import numpy as np
 import os 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
-dir_of_interest = os.path.join(PARENT_DIR, "resources")
-data_path= os.path.join(dir_of_interest, "data","open_pubs1.csv")
+
+data_path = os.path.join(PARENT_DIR, "open_pubs1.csv")
+
 data_path = data_path.replace("/..",'')
 data = pd.read_csv(data_path)
 
