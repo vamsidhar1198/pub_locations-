@@ -11,7 +11,7 @@ data_path= os.path.join(dir_of_interest, "data","open_pubs1.csv")
 data_path = data_path.replace("/..",'')
 data = pd.read_csv(data_path)
 
-data = pd.read_csv(r'/Users/vamsi/Downloads/open_pubs1.csv')
+
 
 st.header('Enter the longitude and latitude')
 lati_min = data[['latitude','longitude']].min()[0]
