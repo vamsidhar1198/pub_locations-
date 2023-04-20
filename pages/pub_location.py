@@ -1,8 +1,14 @@
 import streamlit as st
 import pandas as pd
 import numpy as np 
+import os 
 
-data = pd.read_csv(r'/Users/vamsi/Downloads/open_pubs1.csv')
+FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
+dir_of_interest = os.path.join(PARENT_DIR, "resources")
+data_path= os.path.join(dir_of_interest, "data","open_pubs1.csv")
+data_path = data_path.replace("/..",'')
+data = pd.read_csv(data_path)
 
 local_authority= st.selectbox(
         'select the loacal authority',
